@@ -1,0 +1,28 @@
+To Know Detail
+visit Nxtspace.blogspot.in
+and Inbox your quarry....
+
+
+to use this project follow the step
+
+1- compile server using 
+ $ gcc -g server.c -o server
+ now run server using 
+ $ ./server
+2- now compile client using
+ $ gcc -g client_rms.c -o client_rms
+ mow run client using 
+ $ ./client_rms <ip address> port number
+ $ ./client_server 192.168.0.16 2020
+3- To run multiple place use telnet
+open command or terminal window after that follow writen bellow instruction
+ $ telnet <ip address> <port number>
+ $ telnet 192.168.0.16 2020
+
+care about:
+ffmpeg should be installed
+this program made for railway announcement system 
+your client and server program should be on same OS
+this program tested on multiple os
+
+ 
