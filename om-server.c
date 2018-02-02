@@ -64,11 +64,11 @@ int main(int argc, char *argv[]){
 				if(i == listener){
 					addrlen = sizeof(clientaddr);
 					if((newfd = accept(listener, (struct sockaddr *)&clientaddr, &addrlen)) == -1){
-						perror("Server-accept() error lol!");
+						perror("Server-accept() error lol!..visit- Nxtspace.blogspot.in\n");
 					}
 
 					else{
-						printf("Server-accept() is OK...\n");
+						printf("Server-accept() is OK...Welcome to Nxt Space...\n");
 						FD_SET(newfd, &om);
 						if(newfd > fdmax){
 							fdmax = newfd;
@@ -77,7 +77,10 @@ int main(int argc, char *argv[]){
 					}
 				}
 				else{
-					if((nbytes = recv(i, buf, sizeof(buf), 0)) <= 0){
+					nbytes = recv(i, buf, sizeof(buf), 0);
+					printf("%s: received from socket %d\n", argv[0], i);
+					if((argv[0],i) == (argv[0],4)){
+					if(nbytes <= 0){
 						if(nbytes == 0)
 							printf("%s: socket %d hung up\n", argv[0], i);
 						else
@@ -95,10 +98,11 @@ int main(int argc, char *argv[]){
 					}
 				}
 			}
+					}
+					else printf("%s: User trying to hack connected on socket %d\n", argv[0], i);
 				}
 			}
 		}
 	}
 return 0;
 }
-
